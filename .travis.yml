@@ -19,12 +19,12 @@ script:
   - cd dtkcore*/
   - qmake CONFIG+=release PREFIX=/usr
   - make -j$(nproc)
-  - make install
+  - sudo make install
   - cd ..
   - cd dtkwidget*/
   - qmake CONFIG+=release PREFIX=/usr
   - make -j$(nproc)
-  - make install
+  - sudo make install
   - cd ..
   # Compile a sample application
   - git  clone https://github.com/rekols/optimizer
