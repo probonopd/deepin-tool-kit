@@ -17,12 +17,16 @@ script:
   - tar xf dtkcore_*.orig.tar.gz
   - tar xf dtkwidget_2*.orig.tar.gz
   - cd dtkcore*/
-  - qmake CONFIG+=release PREFIX=/usr
+  - mkdir build
+  - cd build
+  - qmake .. CONFIG+=release PREFIX=/usr
   - make -j$(nproc)
   - sudo make install
-  - cd ..
+  - cd ../..
   - cd dtkwidget*/
-  - qmake CONFIG+=release PREFIX=/usr
+  - mkdir build
+  - cd build
+  - qmake .. CONFIG+=release PREFIX=/usr
   - make -j$(nproc)
   - sudo make install
   - cd ..
