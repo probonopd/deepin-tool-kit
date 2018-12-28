@@ -14,7 +14,8 @@ install:
 script:
   - wget -c "http://deb.debian.org/debian/pool/main/d/dtkcore/dtkcore_2.0.9.11.orig.tar.gz"
   - wget -c "http://deb.debian.org/debian/pool/main/d/dtkwidget/dtkwidget_2.0.9.11.orig.tar.gz"
-  - tar xf *.orig.tar.gz
+  - tar xf dtkcore_*.orig.tar.gz
+  - tar xf dtkwidget_2*.orig.tar.gz
   - cd dtkcore*/
   - qmake CONFIG+=release PREFIX=/usr
   - make -j$(nproc)
